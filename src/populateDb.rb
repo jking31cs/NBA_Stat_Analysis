@@ -1,15 +1,12 @@
 require 'json'
-require 'bson'
 require 'mongo'
-include Mongo
 
 target_json_directory = ARGV[0]
 Dir.chdir(target_json_directory)
 
-mongo_client = MongoClient.new("localhost", 27017)
-db = mongo_client.db('nbaDb')
-
-players = db.collection('nba_players')
+conn = Mongo::Connection.new
+db   = conn['nbaDb']
+players = db["nba_players"]
 
 Dir.foreach(target_json_directory) do |f|
   puts f
