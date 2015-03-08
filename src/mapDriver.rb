@@ -2,10 +2,8 @@ require 'mongo'
 require_relative 'weightForm'
 require_relative 'mapFunction'
 
-include Mongo
-
-db = MongoClient.new('localhost', 27017).db('nbaDb')
-
+conn = Mongo::Connection.new
+db   = conn['nbaDb']
 players = db["nba_players"]
 
 mapping = players.find().map do |player|
