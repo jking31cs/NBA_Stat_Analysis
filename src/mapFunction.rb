@@ -8,9 +8,7 @@ def map(player, form)
   sum += player["ast"] * form.assistWeight
   sum += player["stl"] * form.stealWeight
   sum += player["blk"] * form.blockWeight
-  sum += player["tov"] * form.turnoverWeight
+  sum -= player["tov"] * form.turnoverWeight
 
-  #TODO look into Double Doubles and Triple Doubles maybe.
-  return sum
-  
-end
+   return sum
+ end
