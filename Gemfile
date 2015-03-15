@@ -3,6 +3,6 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem 'json'
-gem 'mongo'
+gem 'mongo', '~> 1.6.4'
 gem "bson"
 gem 'bson_ext'

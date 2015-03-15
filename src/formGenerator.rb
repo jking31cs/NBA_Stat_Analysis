@@ -1,6 +1,6 @@
 require_relative 'weightForm.rb'
 
-totalSum = 1;
+totalSum = 1
 
 def generateForm()
   weights = (0..6).map { |x| rand }

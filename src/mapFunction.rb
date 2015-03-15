@@ -2,13 +2,13 @@ require_relative 'weightForm'
 
 def map(player, form)
   sum = 0
-  sum += player["pts"] * form.pointWeight
-  sum += player["fg3m"] * form.threePointWeight
-  sum += player["reb"] * form.reboundWeight
-  sum += player["ast"] * form.assistWeight
-  sum += player["stl"] * form.stealWeight
-  sum += player["blk"] * form.blockWeight
-  sum -= player["tov"] * form.turnoverWeight
+  sum += player["pts"] * form['pts']
+  sum += player["fg3m"] * form['fg3m']
+  sum += player["reb"] * form['reb']
+  sum += player["ast"] * form['ast']
+  sum += player["stl"] * form['stl']
+  sum += player["blk"] * form['blk']
+  sum -= player["tov"] * form['tov']
 
-   return sum
- end
+  return sum
+end
